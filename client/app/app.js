@@ -23,7 +23,7 @@ angular.module('shortly', [
 
     .when('/links', {
       templateUrl: 'app/links/links.html',
-      controller: 'AuthController'
+      controller: 'LinksController'
     })
 
     .when('/shorten', {

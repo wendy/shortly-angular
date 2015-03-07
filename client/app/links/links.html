@@ -1,4 +1,4 @@
-<div id='container' ng-controller='LinksController' ng-init='getLinks()'>
+<div id='container' ng-init='getLinks()'>
   <!-- Your html here -->
   <div class='navigation' ng-init="link = []">
   <ul>
@@ -7,5 +7,9 @@
     <li><a href='/logout' class='logout'>Logout</a></li>
   </ul>
   </div>
+
+  <pre>
+    {{ thelinks }}
+  </pre>
 
 </div>

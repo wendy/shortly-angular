@@ -4,11 +4,15 @@ angular.module('shortly.services', [])
   // Your code here
 
   var getLinks = function(){
+    console.log('getlinks')
     return $http({
       method: 'GET',
-      url: '/api/links',
-      data: links,
-      success: function(data){ console.log('worked!') }
+      url: '/api/links/',
+      // success: function(data){ console.log('worked!') }
+    }).then(function(resp){
+      for(var i = 0; i < resp.data.length; i++){
+        console.log(resp.data[i].url);
+      }
     })
   };
 
@@ -23,6 +27,14 @@ angular.module('shortly.services', [])
       return data;
     })
   };
+
+  var redirectlink = function(data){
+    return $http({
+      method: 'GET',
+      url: '/api/links/:code',
+      data: data
+    })
+  }
 
   return {
     getLinks: getLinks,

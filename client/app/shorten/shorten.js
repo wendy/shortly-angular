@@ -7,4 +7,8 @@ angular.module('shortly.shorten', [])
     console.log('userslink ', $scope.url);
     return Links.shorterlink({url: $scope.url});
   };
+
+  $scope.redirectlink = function(){
+    return Links.redirectLink({url: $scope.url}});
+  }
 });
