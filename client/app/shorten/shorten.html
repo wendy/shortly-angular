@@ -1,6 +1,22 @@
 <div id='container'>
 <!-- Your code here -->
+  <div class='navigation' ng-init="link = []">
+  <ul>
+    <li><a href='#links' class='index'>All Links</a></li>
+    <li><a href='#shorten' class='create'>Shorten</a></li>
+    <li><a href='/logout' class='logout'>Logout</a></li>
+  </ul>
+  </div>
 
+<!--   <form name='shortenthing' ng-submit='shorten()'>
+    <input ng-model="userslink">
+    <button ng-click='shorten(userslink)'>Add Link</button>
+  </form> -->
+
+  <form name='shortenthing' ng-submit='shorten()'>
+    <input type='text' ng-model='shorten.url'>
+    <button>Add Link</button>
+  </form>
 </div>
 
 

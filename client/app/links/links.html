@@ -1,3 +1,11 @@
-<div id='container'>
+<div id='container' ng-controller='LinksController' ng-init='getLinks()'>
   <!-- Your html here -->
+  <div class='navigation' ng-init="link = []">
+  <ul>
+    <li><a href='#links' class='index'>All Links</a></li>
+    <li><a href='#shorten' class='create'>Shorten</a></li>
+    <li><a href='/logout' class='logout'>Logout</a></li>
+  </ul>
+  </div>
+
 </div>
