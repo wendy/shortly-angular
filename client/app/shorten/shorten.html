@@ -14,9 +14,22 @@
   </form> -->
 
   <form name='shortenthing' ng-submit='shorten()'>
-    <input type='text' ng-model='shorten.url'>
+    <input type='text' ng-model='url'>
     <button>Add Link</button>
   </form>
+
+<!--   <ul>
+    <li ng-repeat='something'> {{}} </li>>
+  </ul>
+ -->
+
+  <div class='info'>
+    <div class='visits'><span class='count'>{{model.visits}}</span>Visits</div>
+    <div class='title'>{{model.title}}</div>
+    <div class='original'>URL: {{model.url}}</div>
+    <a href='{{model.base_url}}/{{model.code}}'>{{model.base_url}}/{{model.code}}</a>
+  </div>
+
 </div>
 
 

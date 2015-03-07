@@ -23,9 +23,10 @@ angular.module('shortly.services', [])
       url: '/api/links/',
       data: link
     })
-    .then(function(data){
-      return data;
-    })
+    // .then(function(data){
+      // console.log('This is the data: ', data);
+      // return data;
+    // })
   };
 
   var redirectlink = function(data){
