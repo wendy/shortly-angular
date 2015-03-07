@@ -10,4 +10,9 @@ angular.module('shortly.links', [])
       $scope.listModel = data;
     });
   };
+
+  $scope.gooverthere = function(model){
+    console.log(model)
+    Links.redirectlink(model);
+  }
 });

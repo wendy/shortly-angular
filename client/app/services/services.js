@@ -24,6 +24,7 @@ angular.module('shortly.services', [])
   };
 
   var redirectlink = function(data){
+    console.log('In redirectlink: ', data)
     return $http({
       method: 'GET',
       url: '/api/links/:code',
@@ -33,7 +34,8 @@ angular.module('shortly.services', [])
 
   return {
     getLinks: getLinks,
-    shorterlink: shorterlink
+    shorterlink: shorterlink,
+    redirectlink: redirectlink
   };
 })
 .factory('Auth', function ($http, $location, $window) {

@@ -15,7 +15,7 @@
         <div class='visits'><span class='count'>{{list.visits}}</span>Visits</div>
         <div class='title'>{{list.title}}</div>
         <div class='original'>URL: {{list.url}}</div>
-        <a href='{{list.base_url}}/{{list.code}}'>{{list.base_url}}/{{list.code}}</a>
+        <a href='{{list.base_url}}/api/links/{{list.code}}' ng-click='gooverthere(list)'>{{list.base_url}}/{{list.code}}</a>
       </div>
     </div>
   </div>
