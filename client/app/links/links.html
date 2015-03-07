@@ -8,8 +8,16 @@
   </ul>
   </div>
 
-  <pre>
-    {{ thelinks }}
-  </pre>
+  <div class='links' ng-repeat='list in listModel'>
+    <div class='link'>
+    <img src='assets/redirect_icon.png'>
+      <div class='info'>
+        <div class='visits'><span class='count'>{{list.visits}}</span>Visits</div>
+        <div class='title'>{{list.title}}</div>
+        <div class='original'>URL: {{list.url}}</div>
+        <a href='{{list.base_url}}/{{list.code}}'>{{list.base_url}}/{{list.code}}</a>
+      </div>
+    </div>
+  </div>
 
 </div>

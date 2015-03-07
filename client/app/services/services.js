@@ -10,9 +10,7 @@ angular.module('shortly.services', [])
       url: '/api/links/',
       // success: function(data){ console.log('worked!') }
     }).then(function(resp){
-      for(var i = 0; i < resp.data.length; i++){
-        console.log(resp.data[i].url);
-      }
+      return resp.data;
     })
   };
 
@@ -23,10 +21,6 @@ angular.module('shortly.services', [])
       url: '/api/links/',
       data: link
     })
-    // .then(function(data){
-      // console.log('This is the data: ', data);
-      // return data;
-    // })
   };
 
   var redirectlink = function(data){
